@@ -1,0 +1,168 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding:2Opx;
+    
+}
+h1{
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.studentcontainer{
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    
+}
+.details label{
+   margin-bottom:5px ;
+   font-weight: bolder;
+}
+.details input[type="text"],
+.details input[type="number"]
+{
+    padding:10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: medium;
+    transition:border-color 0.2s ease;
+}
+.details input:focus{
+    border-color: blue;
+    outline: none;
+}
+.gender-section{
+    display: flex;
+    margin-top: 5px;
+    gap: 10px;
+}
+.gender-section label{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+button {
+    padding:10px 20px ;
+     cursor: pointer;
+    background-color: skyblue;
+    color:black;
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: purple;
+    transform: scale(1.0);
+}
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+th {
+    background-color: rgb(231, 143, 203);
+}
+
+tr:hover {
+    background-color:aqua;
+}
+
+.actionbutton {
+    display:flex;
+    gap: 5px;
+}
+
+.actionbutton button {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.actionbutton button.edit {
+    background-color: red;
+}
+
+.actionbutton button.edit:hover {
+    background-color: grey;
+}
+
+.actionbutton button.delete {
+    background-color:greenyellow;
+}
+
+.actionbutton button.delete:hover {
+    background-color:blueviolet;
+}
+
+/* animations on*/
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #efdfdf;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid whitesmoke;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+        color: #075ebc;
+    }
+
+    .actionbutton {
+        justify-content: flex-start;
+    }
+}

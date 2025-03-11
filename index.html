@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Student Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Student-details -->
+     <div class="studentcontainer">
+      <h1>STUDENT FORM</h1>
+
+      <form id="studentinfo">
+        <div class="fullform">
+
+        <div class="details">
+          <label>Name:</label>
+          <input type="text" id="name">
+        </div>
+
+        <div class="details">
+          <label>Age:</label>
+          <input type="number" id="age">
+        </div>
+
+        <div class="details">
+          <label>Gender:</label>
+          <div class="gender-section">
+            <label><input type="radio" name="gender" value="Male" checked> Male</label>
+            <label><input type="radio" name="gender" value="Female" checked> Female</label>
+        </div>
+        </div>
+
+        <div class="details">
+          <label>Course:</label>
+          <input type="text" id="course">
+        </div>
+
+        <div class="details">
+          <label>E-mail:</label>
+          <input type="text" id="email">
+        </div>
+
+        <div class="details">
+          <button type="button" onclick="saveDetails()" id="save">SAVE</button>
+        </div>
+       </div>
+      </form>
+    </div>
+
+    <!--Table-->
+
+    <table id="saveItems">
+      <thead>
+        <tr>
+          <th>NAME</th>
+          <th>AGE</th>
+          <th>GENDER</th>
+          <th>COURSE</th>
+          <th>EMAIL</th>
+          <th>ACTION</th>
+        </tr>
+      </thead>
+   
+    <tbody>
+      <tr>
+        <td data-label="NAME">Hema</td>
+        <td data-label="AGE">25</td>
+        <td data-label="GENDER">Female</td>
+        <td data-label="COURSE">Web Developer</td>
+        <td data-label="EMAIL">hema3333@gmail.com</td>
+        <td data-label="ACTION">
+          <div class="actionbutton">
+            <button class="edit" onclick="editDetails(this)">Edit</button>
+            <button class="delete" onclick="deleteDetails(this)">Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td data-label="NAME">Kumar</td>
+        <td data-label="AGE">26</td>
+        <td data-label="GENDER">Male</td>
+        <td data-label="COURSE">Front end</td>
+        <td data-label="EMAIL">jothikumar@gmail.com</td>
+        <td data-label="ACTION">
+          <div class="actionbutton">
+            <button class="edit" onclick="editDetails(this)">Edit</button>
+            <button class="delete" onclick="deleteDetails(this)">Delete</button>
+        </td>
+      </tr>
+      </div>
+    </tbody>
+  </table>
+    <script src="script.js"></script>
+  </body>
+</html>
